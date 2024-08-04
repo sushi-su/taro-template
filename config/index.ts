@@ -1,5 +1,6 @@
 import type { UserConfigExport } from '@tarojs/cli';
 import { defineConfig } from '@tarojs/cli';
+import path from 'path';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import devConfig from './dev';
 import prodConfig from './prod';
@@ -88,6 +89,9 @@ export default defineConfig<'webpack5'>(async (merge) => {
           enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
         },
       },
+    },
+    alias: {
+      '@/assets': path.resolve(__dirname, '..', 'src/assets'),
     },
   };
   if (process.env.NODE_ENV === 'development') {
