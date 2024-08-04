@@ -5,8 +5,8 @@ import devConfig from './dev';
 import prodConfig from './prod';
 
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
-export default defineConfig(async (merge) => {
-  const baseConfig: UserConfigExport = {
+export default defineConfig<'webpack5'>(async (merge) => {
+  const baseConfig: UserConfigExport<'webpack5'> = {
     projectName: 'taro-template',
     date: '2024-7-19',
     designWidth: 375,
@@ -39,12 +39,6 @@ export default defineConfig(async (merge) => {
         pxtransform: {
           enable: true,
           config: {},
-        },
-        url: {
-          enable: true,
-          config: {
-            limit: 1024, // 设定转换尺寸上限
-          },
         },
         cssModules: {
           enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
@@ -91,7 +85,7 @@ export default defineConfig(async (merge) => {
       appName: 'taroTemplate',
       postcss: {
         cssModules: {
-          enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
+          enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
         },
       },
     },
