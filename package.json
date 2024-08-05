@@ -80,7 +80,7 @@
     "@types/webpack-env": "^1.18.5",
     "@typescript-eslint/eslint-plugin": "^7.16.1",
     "@typescript-eslint/parser": "^7.16.1",
-    "babel-preset-taro": "3.6.34",
+    "babel-preset-taro": "4.0.4",
     "eslint": "^8.57.0",
     "eslint-config-alloy": "^5.1.2",
     "eslint-plugin-react": "^7.35.0",
